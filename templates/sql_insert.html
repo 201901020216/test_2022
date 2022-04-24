@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h4>在该页面可以插入数据</h4>
+    <!--通过改变form标签中method属性来改变数据请求的方式-->
+    <form action="http://localhost:5000/add" method="POST">
+        name:<input type="text" name="name" autocomplete="off"><br/><br/>
+        age:<input type="text" name="age" autocomplete="off"><br/><br/>
+        <button onclick="myFunction()">提交</button>       <a href="/"><button>返回</button></a>
+        <p id="demo"></p>
+    </form>
+    <script>
+        function myFunction(){
+            var txt;
+            confirm("Successfully inserted data!");
+            txt = "你已成功插入数据！点击查看数据可查看更新后的数据";
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+</div>
+
+</body>
+</html>
